@@ -1,0 +1,38 @@
+<html>
+    <HEAd>
+    </HEAd>
+    <BODy id="body">
+        <h1>HELLO BUDDY <h4 id="ADD" value="Demo"></h4></h1>
+        <a id="insta_link" ></a><img src="" id="insta">
+        <script>
+        const url = window.location.search;
+        const params = new URLSearchParams(url);
+        let shop = params.get('q');
+        console.log(shop);
+        let imgSrc = "https://t4.ftcdn.net/jpg/04/70/29/97/240_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg";
+        let insta_link = "";
+        var myImg = document.getElementById('insta');
+        var instaLink = document.getElementById('insta_link');
+        if(shop=='sai-2')
+        {
+            imgSrc = "./RES/mobile vector-1.png";
+            insta_link = "https://www.geeksforgeeks.org/how-to-create-an-image-element-dynamically-using-javascript/";
+            instaLink.innerHTML = "geeksforgeeks";
+            instaLink.href = insta_link;
+            myImg.src = imgSrc;
+        }
+            // document.getElementById("insta").scr="C:\Users\RAHUL\Desktop\shivam\CATALOG\github\github id pass-2.jpg"
+        else
+        {
+            insta_link = "https://developer.mozilla.org/en-US/docs/Web/API/Location/search";
+            instaLink.innerHTML = "developer";
+            instaLink.href = insta_link;
+            myImg.src = imgSrc;
+        }
+        document.getElementById("ADD").innerHTML = params.get('q');
+        console.log(document.getElementById("ADD").value);
+        console.log(document.getElementById("ADD").innerHtml);
+    </script>
+    </BODy>
+   
+</html>
