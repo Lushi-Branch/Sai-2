@@ -327,7 +327,7 @@ width: 100% !important;
 <script>
     const url = window.location.search;
     const params = new URLSearchParams(url);
-    let shop = params.get('q');
+    let shop = params.get('q').toLowerCase();
     //let shop1 = toString("sai-1").toLowerCase;
 
     console.log(shop);
